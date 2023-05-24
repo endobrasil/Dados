@@ -1,0 +1,35 @@
+Trilha Digital | Data Science
+
+O que é o git
+	snapshots -> fotos do estado do projeto
+instalando e configueando o git
+repositórios do git
+	trazer algo já pronto X começar desenvolver local e depois compartilhar...
+	$git init -> inicia um repositório git
+gravando mudanças no repositório
+	untracked -> criar arquivo novo no projeto.
+	unmodified -> salvo no estado que está e o git sabe o estado dele
+	modifiede -> tem mudanças que eu possa querer mandar para o próximo commit.
+	staged -> área preparatória para dar o commit, ser salva no servidor.
+
+	git add -> adicionar os arquivos na área de staged
+
+git diff, commit e rm
+git log e restore
+repositórios remotos
+	git remote
+	git pull
+	git push
+	git fetch -> verefica o que está para vir ao meu código
+	git diff origin/master
+github
+git branch
+	desenvolver em paralelo e em serto ponto agente junta nosso código
+	git branch testing
+		ai o ponteiro que diz onde estamos, HEAD
+	git log --online --decorate
+	git checkout testing
+		para mudar de branch
+
+margin branches
+vai sempre pra branche que quer receber, git branch master, e da um margin, git marge testing
