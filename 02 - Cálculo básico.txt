@@ -12,12 +12,17 @@ definições de funções
 
 
 expressão funcional, graficos e paridade
-função inversa e composição de funções
+função inversa e composição de funções	
 exemplo de funções e gráficos
+	ai entrou sen cos tang buguei...
 conceitos de limites
+	um dos mais fundamentais de cálculo
+	tende ao infinito sempre se aproximando de zero nunca chegando á, jamais utrapassando.
+
 exercícios I
+	acertei uma...
 Aplicação de limites
 derivadas - intuição e necessidade
 derivada - contrução geométrica
-regras de derivação
+definição e regras de derivação
 exercícios II
