@@ -1,0 +1,23 @@
+definições de funções
+	conjuto A,B
+	Produto cartesiano AxB={(a,b) aEA ; bEB}
+	Relação: 
+	função
+	domínio
+	contra domínio
+	imagem -> sub conjunto contra domínio
+	injetoras -> todo mundo se relaciona
+	sobrejetoras -> mesmo valor da imagem tem valores mapeados diferentes no domínio
+	bijetoras -> 
+
+
+expressão funcional, graficos e paridade
+função inversa e composição de funções
+exemplo de funções e gráficos
+conceitos de limites
+exercícios I
+Aplicação de limites
+derivadas - intuição e necessidade
+derivada - contrução geométrica
+regras de derivação
+exercícios II
