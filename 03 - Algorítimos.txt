@@ -1,0 +1,12 @@
+apresentando algorítimos
+fluxos simples, sequencial
+tipos de dados
+decisão
+repetição
+exercícios I
+listas/arrays
+funções
+exercícios completo (pseudocódigo)
+desempenho de algorítimos
+dicas para montar algorítimos
+exercóicios II
