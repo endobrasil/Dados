@@ -1,0 +1,10 @@
+Introdução ao SQL
+Queries simples
+funções agregadas
+joins
+queries complexas
+índices
+window functions
+PBI carregando dados e queries simples
+PBI filtros e métricas
+PBI Relatório completo
