@@ -1,0 +1,16 @@
+Introdução ao curso
+	modelagem (escola)
+tipos de dados e custo de armazenamento
+modelagem de entidades
+modelagem de relacionamentos
+	https://online.visual-paradigm.com/pt/
+normalização de dados
+exercícios I
+	só acertei duas, que porra foi esta... :'(
+inserindo tabelas no banco
+inserindo dados no banco
+editando e removendo dados
+permissionamento e views
+	
+indices
+exercícios II
