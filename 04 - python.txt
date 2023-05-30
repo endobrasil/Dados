@@ -1,0 +1,17 @@
+Setup: instalação, configurações iniciais
+Entrada e saída de dados
+		visual code
+		print
+		input		
+variáveis	
+operadores aritméticos e booleanos
+conversão de tipos
+exercíciosI
+Estruturas condicionais
+laços de repetição while
+laços de repetição for
+estrutura de listas
+métodos e funções de listas
+exercícios II
+funções
+dicionários
