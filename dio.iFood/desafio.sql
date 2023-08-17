@@ -198,7 +198,10 @@ insert into Terceiro_Vendedor(razao_social,local,nome_fantasia,endereco,cnpj) va
 ("  Vendedor 7  "," Local 7 "," Empresa 2 "," Rua 7 ",'214565498654987'),
 ("  Vendedor 8  "," Local 8 "," Empresa 3 "," Rua 8 ",'987956546232100'),
 ("  Vendedor 9  "," Local 9 "," Empresa 4 "," Rua 9 ",'123004561278945'),
-("  Vendedor 10 "," Local 10  "," Empresa 5 "," Rua 10  ",'369858521474100');
+("  Vendedor 10 "," Local 10  "," Empresa 5 "," Rua 10  ",'369858521474100'),
+("  Vendedor 11 "," Local 11 ", " Empresa 6 "," Rua 11 ",'123954471898741'),
+("  Vendedor 12 "," Local 12 ", " Empresa 7 "," Rua 12 ",'217895498654972'),
+("  Vendedor 13 "," Local 13 ", " Empresa 8 "," Rua 13 ",'123004564564504');
 
 
 -- Cadastro de Produtos
@@ -353,3 +356,85 @@ insert into Disponibiliza_Produto values
 ( 6 , 2 ),
 ( 1 , 1 ),
 ( 6 , 1 );
+
+
+
+-- Selecionado todos os clientes
+  select * from Cliente
+
+
+-- Uma consulta que responde a pergunta:
+-- "Quais os clientes que moram em uma determinada localidade?"
+-- com o intúito de fazer uma promoção nesta localidade
+select * from Cliente where endereco like "%Rua: 1%"
+
+
+-- Uma consulta que responde a pergunta:
+-- "Quais os clientes que moram em uma determinada localidade?"
+-- com o intúito de fazer uma promoção nesta localidade ordenando 
+-- de forma decrescente a idade, que será o foco desta promoção
+ select * from Cliente 
+ where endereco like "%Rua:%" order by nascimento desc
+
+
+ -- Uma consulta que responde a pergunta:
+ -- Qual a média dos valores por categoria com as piores avaliações e
+ -- onde o valor deste produto ultrapassa 80?"
+  select p.categoria as 'Categoria' , avg(p.valor) as "média dos valores", avg(p.avaliacao) as 'média das piores avaliações' 
+from Produto p
+where p.avaliacao<=5
+group by p.categoria
+having avg(p.valor)>80
+order by p.categoria desc
+
+ 
+-- Uma consulta que responde a pergunta:
+-- "revela qual produto cada cliente comprou?"
+select c.p_nome as cliente, p.descricao as produto
+from Pedido p
+inner join Cliente c on p.Cliente_id = c.id
+order by cliente
+
+-- Uma consulta que responde as perguntas:
+-- "quanto cada cliente esta gastando com os fretes? 
+-- Quem é o cliente que mais gasta?"
+select c.p_nome as cliente, sum(p.frete) as "soma dos fretes"
+from Pedido p
+inner join Cliente c on p.Cliente_id = c.id
+group by cliente
+order by sum(p.frete) desc
+
+
+--Quantos pedidos foram feitos por cada cliente? 
+select c.p_nome as cliente, count(*) as "Quantidade de pedidos"
+from Pedido p
+inner join Cliente c on p.Cliente_id = c.id
+group by cliente
+order by count(*) desc
+
+
+-- Algum vendedor também é fornecedor? 
+select f.razao_social as Fornecedor, v.nome_fantasia as Vendedor
+from Fornecedor f
+inner join Terceiro_Vendedor v on f.cnpj = v.cnpj
+
+
+-- Relação de produtos fornecedores e estoques; 
+select p.descricao as produto, f.razao_social as fornecedor, sum(pe.quantidade)
+from Produto p
+inner join Disponibiliza_Produto dp on p.id=dp.Produto_id
+inner join Fornecedor f on f.id = dp.Fornecedor_id
+inner join Produto_em_Estoque pe on p.id=pe.Produto_id
+group by produto, fornecedor
+order by produto, fornecedor
+
+
+-- Relação de nomes dos fornecedores e nomes dos produtos; 
+select f.razao_social as fornecedor, p.descricao as produto
+from Produto p
+inner join Disponibiliza_Produto dp on p.id=dp.Produto_id
+inner join Fornecedor f on f.id = dp.Fornecedor_id
+order by fornecedor
+
+
+
