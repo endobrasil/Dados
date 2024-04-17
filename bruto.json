@@ -1,0 +1,12 @@
+{
+  "error": {
+    "code": "UserError",
+    "message": "File https://aka.ms/bike-rentals/MLTable is empty. Please make sure it's a valid MLTable which must match the documentation (https://learn.microsoft.com/en-us/azure/machine-learning/concept-data?tabs=uri-file-example%2Ccli-data-create-example#uris)",
+    "additionalInfo": null,
+    "details": []
+  },
+  "correlation": {
+    "operation": "232961c9bbc44483ac345fd7218392b5",
+    "request": "05f3e5380ef723b0"
+  }
+}
